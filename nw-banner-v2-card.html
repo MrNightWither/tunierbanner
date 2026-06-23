@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NightWither – Dark Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .banner-card {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    background: linear-gradient(135deg, #111117 0%, #0d0d11 100%);
+    border: 1px solid #1e1e28;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  /* top gold border accent */
+  .banner-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6) 40%, rgba(240,208,128,0.8) 50%, rgba(201,168,76,0.6) 60%, transparent);
+  }
+
+  /* corner glow */
+  .banner-card::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(201,168,76,0.13) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .card-divider {
+    width: 1px;
+    height: 64px;
+    background: linear-gradient(180deg, transparent, rgba(201,168,76,0.45), transparent);
+    flex-shrink: 0;
+  }
+
+  .card-date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 2px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-day {
+    font-size: 40px;
+    font-weight: 700;
+    color: #c9a84c;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(201,168,76,0.3);
+  }
+
+  .card-month {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #7a6030;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c9a84c;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+  .card-headline {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.05;
+  }
+
+  .card-sub {
+    font-size: 13px;
+    color: #5a5a6a;
+    font-family: 'Inter', sans-serif;
+    margin-top: 3px;
+  }
+
+  .card-time {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 12px;
+    background: rgba(201,168,76,0.07);
+    border: 1px solid rgba(201,168,76,0.18);
+    border-radius: 3px;
+    padding: 5px 14px;
+    width: fit-content;
+  }
+
+  .card-time-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c9a84c;
+    box-shadow: 0 0 6px rgba(201,168,76,0.8);
+    animation: pulse 2s infinite;
+  }
+
+  .card-time-text {
+    font-size: 12px;
+    color: #c9a84c;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 6px rgba(201,168,76,0.8); }
+    50% { opacity: 0.4; transform: scale(0.75); box-shadow: 0 0 2px rgba(201,168,76,0.3); }
+  }
+</style>
+</head>
+<body>
+
+<div class="banner-card">
+  <div class="card-date-block">
+    <div class="card-day">18</div>
+    <div class="card-month">Juli</div>
+  </div>
+  <div class="card-divider"></div>
+  <div class="card-body">
+    <div class="card-eyebrow">NightWither Event</div>
+    <div class="card-headline">Warzone Turnier</div>
+    <div class="card-sub">Meldet euch gerne!</div>
+    <div class="card-time">
+      <div class="card-time-dot"></div>
+      <div class="card-time-text">Start: 21:00 Uhr</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
